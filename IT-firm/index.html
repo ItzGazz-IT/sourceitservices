@@ -15,80 +15,68 @@
 <link href="css/responsive.min.css" rel="stylesheet">
 
 <style>
-.service-one .service-one-carousel .service-block_one{
-	padding:0 10px;
+.main-slider .slide{padding:215px 0 140px;}
+.main-slider .image-layer:before{background:linear-gradient(110deg, rgba(9,19,38,0.78) 0%, rgba(10,42,92,0.58) 100%);} 
+.main-slider .image-layer:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 22%, rgba(8,150,252,0.26) 0%, rgba(8,150,252,0) 42%),radial-gradient(circle at 82% 76%, rgba(11,90,219,0.24) 0%, rgba(11,90,219,0) 38%);} 
+.hero-grid{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:34px;}
+.hero-grid .content-column{max-width:670px;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#eaf4ff;background:rgba(7,19,41,0.52);border:1px solid rgba(255,255,255,0.22);margin-bottom:18px;}
+.hero-tag .dot{width:8px;height:8px;border-radius:50%;background:#36d97a;box-shadow:0 0 0 5px rgba(54,217,122,0.2);animation:heroPulse 1.8s ease-in-out infinite;}
+.main-slider_title .accent{color:#74c4ff;}
+.main-slider .main-slider_text{max-width:600px;font-size:18px;line-height:1.7em;color:#e6f1ff;margin-top:22px;margin-bottom:28px;}
+.hero-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px;}
+.hero-actions .btn-style-one,.hero-actions .hero-ghost{border-radius:999px;}
+.hero-actions .hero-ghost{padding:12px 24px;border:1px solid rgba(255,255,255,0.46);color:#fff;font-weight:700;transition:all .25s ease;}
+.hero-actions .hero-ghost:hover{background:#fff;color:#0b5adb;}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap;}
+.hero-chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.22);color:#f1f8ff;font-size:13px;}
+.hero-side{width:350px;max-width:100%;}
+.hero-card{padding:22px 22px 18px;border-radius:18px;background:linear-gradient(160deg, rgba(10,26,54,0.84) 0%, rgba(8,42,95,0.74) 100%);border:1px solid rgba(255,255,255,0.2);box-shadow:0 18px 36px rgba(5,18,43,0.42);backdrop-filter:blur(4px);animation:heroFloat 3.4s ease-in-out infinite;}
+.hero-card h5{color:#fff;font-size:22px;margin-bottom:8px;}
+.hero-card p{color:#d2e6ff;line-height:1.6em;margin-bottom:16px;}
+.hero-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.hero-stat{padding:10px 12px;border-radius:12px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);}
+.hero-stat strong{display:block;font-size:20px;line-height:1.1em;color:#fff;}
+.hero-stat span{font-size:12px;color:#c6dcfb;text-transform:uppercase;letter-spacing:.04em;}
+@keyframes heroFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes heroPulse{0%,100%{transform:scale(1);}50%{transform:scale(1.1);}}
+
+.service-one{position:relative;padding:70px 0 90px;background:linear-gradient(180deg,#f3f8ff 0%,#edf4ff 100%);overflow:hidden;}
+.service-one::before,.service-one::after{content:"";position:absolute;border-radius:50%;pointer-events:none;}
+.service-one::before{width:280px;height:280px;left:-120px;top:-80px;background:radial-gradient(circle,rgba(8,150,252,0.2) 0%,rgba(8,150,252,0) 70%);} 
+.service-one::after{width:360px;height:360px;right:-140px;bottom:-170px;background:radial-gradient(circle,rgba(11,90,219,0.22) 0%,rgba(11,90,219,0) 72%);} 
+.service-one .service-one-carousel{position:relative;z-index:2;}
+.service-one .service-one-carousel .service-block_one{padding:12px 10px;}
+.service-one .service-one-carousel .service-block_one-inner{margin-top:0;padding:28px 22px 24px;min-height:360px;border-radius:18px;border:1px solid rgba(11,90,219,0.14);background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);box-shadow:0 12px 28px rgba(11,90,219,0.1);overflow:hidden;position:relative;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;}
+.service-one .service-one-carousel .service-block_one-inner:hover{transform:translateY(-8px);border-color:rgba(11,90,219,0.3);box-shadow:0 20px 36px rgba(11,90,219,0.2);}
+.service-one .service-one-carousel .service-block_one-inner::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(8,150,252,0) 35%,rgba(8,150,252,0.22) 50%,rgba(8,150,252,0) 65%);transform:translateX(-130%);transition:transform .6s ease;pointer-events:none;}
+.service-one .service-one-carousel .service-block_one-inner:hover::before{transform:translateX(130%);} 
+.service-one .service-one-carousel .service-block_one-icon{box-shadow:0 10px 20px rgba(11,90,219,0.16);background:#fff;transition:transform .35s ease;}
+.service-one .service-one-carousel .service-block_one-inner:hover .service-block_one-icon{transform:rotate(-7deg) scale(1.06);} 
+.service-one .service-one-carousel .service-block_one-overlay{display:none;}
+.service-one .service-one-carousel .service-block_one-text{min-height:118px;}
+.service-one .service-one-carousel .service-block_one-link{border-radius:999px;padding:10px 22px;background:linear-gradient(140deg,#0b5adb 0%,#1275f3 100%);box-shadow:0 10px 20px rgba(11,90,219,0.2);transition:transform .25s ease,box-shadow .25s ease;}
+.service-one .service-one-carousel .service-block_one-link:hover{transform:translateY(-2px);box-shadow:0 14px 24px rgba(11,90,219,0.28);} 
+.service-one .service-one-carousel .owl-stage-outer{padding:8px 0 26px;}
+.service-one .service-one-carousel .owl-nav{text-align:center;margin-top:8px;}
+.service-one .service-one-carousel .owl-nav .owl-prev,.service-one .service-one-carousel .owl-nav .owl-next{width:44px;height:44px;line-height:44px;display:inline-block;margin:0 6px;border-radius:50%;font-size:16px;background:#fff;color:#0b5adb;box-shadow:0 10px 20px rgba(11,90,219,0.15);transition:all .25s ease;}
+.service-one .service-one-carousel .owl-nav .owl-prev:hover,.service-one .service-one-carousel .owl-nav .owl-next:hover{color:#fff;background:#0b5adb;transform:translateY(-2px);} 
+.service-one .service-one-carousel .owl-dots{text-align:center;margin-top:10px;}
+.service-one .service-one-carousel .owl-dots .owl-dot{width:10px;height:10px;border-radius:50%;margin:0 4px;background:#c5d7f5;display:inline-block;transition:all .25s ease;}
+.service-one .service-one-carousel .owl-dots .owl-dot.active,.service-one .service-one-carousel .owl-dots .owl-dot:hover{background:#0b5adb;transform:scale(1.15);} 
+
+@media only screen and (max-width:991px){
+	.main-slider .slide{padding:175px 0 115px;}
+	.hero-grid{flex-direction:column;align-items:flex-start;gap:22px;}
+	.hero-side{width:100%;}
 }
 
-.service-one .service-one-carousel .service-block_one-inner{
-	overflow:hidden;
-	position:relative;
-}
-
-.service-one .service-one-carousel .service-block_one-inner::after{
-	content:"";
-	position:absolute;
-	inset:auto -35% -70px;
-	height:140px;
-	background:radial-gradient(circle, rgba(8,150,252,0.2) 0%, rgba(8,150,252,0) 72%);
-	animation:it-glow 3s ease-in-out infinite;
-	pointer-events:none;
-}
-
-.service-one .service-one-carousel .owl-stage-outer{
-	padding:8px 0 24px;
-}
-
-.service-one .service-one-carousel .owl-nav{
-	text-align:center;
-	margin-top:8px;
-}
-
-.service-one .service-one-carousel .owl-nav .owl-prev,
-.service-one .service-one-carousel .owl-nav .owl-next{
-	width:42px;
-	height:42px;
-	line-height:42px;
-	display:inline-block;
-	margin:0 6px;
-	border-radius:50%;
-	font-size:16px;
-	background:#ffffff;
-	color:#0b5adb;
-	box-shadow:0 8px 18px rgba(11,90,219,0.15);
-	transition:all .25s ease;
-}
-
-.service-one .service-one-carousel .owl-nav .owl-prev:hover,
-.service-one .service-one-carousel .owl-nav .owl-next:hover{
-	color:#ffffff;
-	background:#0b5adb;
-	transform:translateY(-2px);
-}
-
-.service-one .service-one-carousel .owl-dots{
-	text-align:center;
-	margin-top:6px;
-}
-
-.service-one .service-one-carousel .owl-dots .owl-dot{
-	width:10px;
-	height:10px;
-	border-radius:50%;
-	margin:0 4px;
-	background:#c5d7f5;
-	display:inline-block;
-	transition:all .25s ease;
-}
-
-.service-one .service-one-carousel .owl-dots .owl-dot.active,
-.service-one .service-one-carousel .owl-dots .owl-dot:hover{
-	background:#0b5adb;
-	transform:scale(1.15);
-}
-
-@keyframes it-glow{
-	0%, 100% { opacity:0.2; transform:translateX(-10px); }
-	50% { opacity:0.8; transform:translateX(10px); }
+@media only screen and (max-width:767px){
+	.main-slider .slide{padding:145px 0 96px;}
+	.hero-chip{font-size:12px;}
+	.service-one{padding:56px 0 70px;}
+	.service-one .service-one-carousel .service-block_one-inner{min-height:330px;padding:24px 18px 20px;}
+	.service-one .service-one-carousel .service-block_one-text{min-height:auto;}
 }
 </style>
 
@@ -131,25 +119,42 @@
 						<li><a href="tel:+27100065557"><span class="icon fa-solid fa-phone fa-fw"></span>(010) 006-5557</a></li>
 						<li><a href="mailto:support@itserv.co.za"><span class="icon fa-solid fa-envelope fa-fw"></span>support@itserv.co.za</a></li>
 						<li><a href="https://www.google.com/maps/search/?api=1&amp;query=20+Pyramid+Road,+Isandovale,+Gauteng,+South+Africa" target="_blank" rel="noopener noreferrer"><span class="icon fa-solid fa-map fa-fw"></span>20 Pyramid Road, Isandovale, Gauteng, South Africa</a></li>
-					</ul>
-					<!-- Social Box -->
-					<ul class="header-social_box">
-<li><a href="https://www.facebook.com/people/Source-It-Services/61587054354144/" class="fa-brands fa-facebook-f fa-fw"></a></li>
-<li><a href="https://www.instagram.com/source.itservices/" class="fa-brands fa-instagram fa-fw"></a></li>
-<li><a href="https://wa.me/27837754514" class="fa-brands fa-whatsapp fa-fw"></a></li>
-</ul>
-				</div>
-			</div>
-		</div>
-		<!-- End Header Top -->
-		
-        <!-- Header Lower -->
-        <div class="header-lower">
+						<div class="hero-grid">
+							<div class="content-column">
+								<div class="inner-column">
+									<div class="hero-tag"><span class="dot"></span>Managed Business Technology</div>
+									<h1 class="main-slider_title">Managed IT Support <br> <span class="accent">That Keeps Business Moving</span></h1>
+									<div class="main-slider_text">Source IT Services delivers practical support, secure infrastructure, and responsive service for growing South African businesses.</div>
+									<div class="hero-actions">
+										<a class="btn-style-one theme-btn btn-item" href="contact.html">
+											<div class="btn-wrap">
+												<span class="text-one">Book a consultation</span>
+												<span class="text-two">Book a consultation</span>
+											</div>
+										</a>
+										<a class="hero-ghost" href="services.html">Explore Services</a>
+									</div>
+									<div class="hero-chips">
+										<span class="hero-chip">24/7 Monitoring</span>
+										<span class="hero-chip">SLA Driven Support</span>
+										<span class="hero-chip">Proudly South African</span>
+									</div>
+								</div>
+							</div>
+							<div class="hero-side">
+								<div class="hero-card">
+									<h5>Operational Confidence</h5>
+									<p>Proactive support and fast response that keeps your teams productive and protected.</p>
+									<div class="hero-stats">
+										<div class="hero-stat"><strong>25+</strong><span>Years Experience</span></div>
+										<div class="hero-stat"><strong>300+</strong><span>Projects Delivered</span></div>
+										<div class="hero-stat"><strong>98%</strong><span>Client Retention</span></div>
+										<div class="hero-stat"><strong>Mon-Fri</strong><span>Support Window</span></div>
+									</div>
+								</div>
+							</div>
             
-			<div class="auto-container">
-				<div class="inner-container d-flex justify-content-between align-items-center">
 					
-					<!-- Logo Box -->
 					<div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
 					
 					<div class="nav-outer d-flex align-items-center">
@@ -157,24 +162,42 @@
 						<!-- Main Menu -->
 						<nav class="main-menu show navbar-expand-md">
 							<div class="navbar-header">
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
+						<div class="hero-grid">
+							<div class="content-column">
+								<div class="inner-column">
+									<div class="hero-tag"><span class="dot"></span>End-to-End IT Portfolio</div>
+									<h2 class="main-slider_title">Connectivity, Cloud, and Security <br> <span class="accent">Under One Partner</span></h2>
+									<div class="main-slider_text">From fibre and Microsoft 365 to cyber security and communications, we align technology with your operational goals.</div>
+									<div class="hero-actions">
+										<a class="btn-style-one theme-btn btn-item" href="services.html">
+											<div class="btn-wrap">
+												<span class="text-one">Explore services</span>
+												<span class="text-two">Explore services</span>
+											</div>
+										</a>
+										<a class="hero-ghost" href="contact.html">Get a Quote</a>
+									</div>
+									<div class="hero-chips">
+										<span class="hero-chip">Fibre &amp; Wireless</span>
+										<span class="hero-chip">Cloud Platforms</span>
+										<span class="hero-chip">Cyber Security</span>
+									</div>
+								</div>
 							</div>
-							
-							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-								<ul class="navigation clearfix">
-
-								<li><a href="index.html">Home</a></li>
-									<li><a href="about.html">About Us</a></li>
-									<li class="dropdown"><a href="#">Services</a>
+							<div class="hero-side">
+								<div class="hero-card">
+									<h5>Single Technology Partner</h5>
+									<p>Reduce vendor complexity with one accountable team across infrastructure, cloud, and security.</p>
+									<div class="hero-stats">
+										<div class="hero-stat"><strong>1</strong><span>Partner Model</span></div>
+										<div class="hero-stat"><strong>9</strong><span>Service Verticals</span></div>
+										<div class="hero-stat"><strong>Fast</strong><span>Escalation Path</span></div>
+										<div class="hero-stat"><strong>Clear</strong><span>Reporting</span></div>
+									</div>
+								</div>
+							</div>
 <ul>
-<li><a href="services.html">Services</a></li>
-<li><a href="service-connectivity.html">Connectivity Solutions</a></li>
 <li><a href="service-cloud.html">Cloud Solutions</a></li>
-<li><a href="service-cyber-security.html">Cyber Security</a></li>
 <li><a href="service-communication.html">Communication Solutions</a></li>
 <li><a href="service-network.html">Network Solutions</a></li>
 <li><a href="service-web-app-development.html">Web &amp; App Development</a></li>
@@ -182,25 +205,42 @@
 <li><a href="service-microsoft-365.html">Microsoft 365 Solutions</a></li>
 <li><a href="service-detail.html">Service Overview</a></li>
 </ul>
-</li>
-									<li class="dropdown"><a href="#">Project</a>
-										<ul>
-											<li><a href="project.html">project</a></li>
-											<li><a href="project-detail.html">project Detail</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="#">Blog</a>
-										<ul>
-											<li><a href="blog.html">Our Blog</a></li>
-											<li><a href="blog-detail.html">Blog Detail</a></li>
-											<li><a href="not-found.html">Not Found</a></li>
-										</ul>
-									</li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
+						<div class="hero-grid">
+							<div class="content-column">
+								<div class="inner-column">
+									<div class="hero-tag"><span class="dot"></span>Rapid Incident Response</div>
+									<h2 class="main-slider_title">Fast Response When <br> <span class="accent">Your Team Needs Help</span></h2>
+									<div class="main-slider_text">Speak to us about support coverage, incident response, and practical solutions that reduce downtime.</div>
+									<div class="hero-actions">
+										<a class="btn-style-one theme-btn btn-item" href="https://wa.me/27837754514" target="_blank" rel="noopener noreferrer">
+											<div class="btn-wrap">
+												<span class="text-one">Chat on WhatsApp</span>
+												<span class="text-two">Chat on WhatsApp</span>
+											</div>
+										</a>
+										<a class="hero-ghost" href="contact.html">Open Support Request</a>
+									</div>
+									<div class="hero-chips">
+										<span class="hero-chip">Incident Triage</span>
+										<span class="hero-chip">Remote Assist</span>
+										<span class="hero-chip">Business Continuity</span>
+									</div>
+								</div>
 							</div>
+							<div class="hero-side">
+								<div class="hero-card">
+									<h5>Support That Moves Fast</h5>
+									<p>Our team prioritizes critical issues first, communicates clearly, and restores operations with minimal disruption.</p>
+									<div class="hero-stats">
+										<div class="hero-stat"><strong>SLA</strong><span>Aligned Response</span></div>
+										<div class="hero-stat"><strong>Live</strong><span>Status Updates</span></div>
+										<div class="hero-stat"><strong>Senior</strong><span>Escalation Support</span></div>
+										<div class="hero-stat"><strong>Practical</strong><span>Fix Approach</span></div>
+									</div>
+								</div>
+							</div>
+									<li><a href="contact.html">Contact</a></li>
 							
-						</nav>
 						<!-- Main Menu End-->
 						
 						<!-- Mobile Navigation Toggler -->
