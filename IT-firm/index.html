@@ -11,8 +11,86 @@
 <meta property="og:type" content="website">
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet">
+<link href="css/responsive.min.css" rel="stylesheet">
+
+<style>
+.service-one .service-one-carousel .service-block_one{
+	padding:0 10px;
+}
+
+.service-one .service-one-carousel .service-block_one-inner{
+	overflow:hidden;
+	position:relative;
+}
+
+.service-one .service-one-carousel .service-block_one-inner::after{
+	content:"";
+	position:absolute;
+	inset:auto -35% -70px;
+	height:140px;
+	background:radial-gradient(circle, rgba(8,150,252,0.2) 0%, rgba(8,150,252,0) 72%);
+	animation:it-glow 3s ease-in-out infinite;
+	pointer-events:none;
+}
+
+.service-one .service-one-carousel .owl-stage-outer{
+	padding:8px 0 24px;
+}
+
+.service-one .service-one-carousel .owl-nav{
+	text-align:center;
+	margin-top:8px;
+}
+
+.service-one .service-one-carousel .owl-nav .owl-prev,
+.service-one .service-one-carousel .owl-nav .owl-next{
+	width:42px;
+	height:42px;
+	line-height:42px;
+	display:inline-block;
+	margin:0 6px;
+	border-radius:50%;
+	font-size:16px;
+	background:#ffffff;
+	color:#0b5adb;
+	box-shadow:0 8px 18px rgba(11,90,219,0.15);
+	transition:all .25s ease;
+}
+
+.service-one .service-one-carousel .owl-nav .owl-prev:hover,
+.service-one .service-one-carousel .owl-nav .owl-next:hover{
+	color:#ffffff;
+	background:#0b5adb;
+	transform:translateY(-2px);
+}
+
+.service-one .service-one-carousel .owl-dots{
+	text-align:center;
+	margin-top:6px;
+}
+
+.service-one .service-one-carousel .owl-dots .owl-dot{
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	margin:0 4px;
+	background:#c5d7f5;
+	display:inline-block;
+	transition:all .25s ease;
+}
+
+.service-one .service-one-carousel .owl-dots .owl-dot.active,
+.service-one .service-one-carousel .owl-dots .owl-dot:hover{
+	background:#0b5adb;
+	transform:scale(1.15);
+}
+
+@keyframes it-glow{
+	0%, 100% { opacity:0.2; transform:translateX(-10px); }
+	50% { opacity:0.8; transform:translateX(10px); }
+}
+</style>
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -292,10 +370,10 @@
 	<!-- Service One -->
 	<section class="service-one">
 		<div class="auto-container">
-			<div class="row clearfix">
+			<div class="service-one-carousel owl-carousel owl-theme">
 				
 				<!-- Service Block One -->
-				<div class="service-block_one col-lg-3 col-md-6 col-sm-12">
+				<div class="service-block_one item">
 					<div class="service-block_one-inner">
 						<div class="service-block_one-icon"><img src="images/icons/service-1.png" alt="" /></div>
 						<h5 class="service-block_one-title"><a href="service-connectivity.html">Connectivity <span>Solutions</span></a></h5>
@@ -309,7 +387,7 @@
 				</div>
 				
 				<!-- Service Block One -->
-				<div class="service-block_one col-lg-3 col-md-6 col-sm-12">
+				<div class="service-block_one item">
 					<div class="service-block_one-inner">
 						<div class="service-block_one-icon"><img src="images/icons/service-2.png" alt="" /></div>
 						<h5 class="service-block_one-title"><a href="service-cloud.html">Cloud <span>Solutions</span></a></h5>
@@ -323,7 +401,7 @@
 				</div>
 				
 				<!-- Service Block One -->
-				<div class="service-block_one col-lg-3 col-md-6 col-sm-12">
+				<div class="service-block_one item">
 					<div class="service-block_one-inner">
 						<div class="service-block_one-icon"><img src="images/icons/service-3.png" alt="" /></div>
 						<h5 class="service-block_one-title"><a href="service-cyber-security.html">Cyber <span>Security</span></a></h5>
@@ -337,7 +415,7 @@
 				</div>
 				
 				<!-- Service Block One -->
-				<div class="service-block_one col-lg-3 col-md-6 col-sm-12">
+				<div class="service-block_one item">
 					<div class="service-block_one-inner">
 						<div class="service-block_one-icon"><img src="images/icons/service-4.png" alt="" /></div>
 						<h5 class="service-block_one-title"><a href="service-communication.html">Communication <span>Solutions</span></a></h5>
@@ -346,6 +424,34 @@
 						<div class="service-block_one-overlay" style="background-image:url(images/resource/service-1.jpg)">
 							<div class="service-block_one-text-two">Cloud PBX Systems, Conferencing Solutions, Call Centre Solutions, Unified Messaging.</div>
 							<a class="theme-btn service-block_one-link two" href="service-communication.html">View Service Page</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service Block One -->
+				<div class="service-block_one item">
+					<div class="service-block_one-inner">
+						<div class="service-block_one-icon"><img src="images/icons/service-31.png" alt="" /></div>
+						<h5 class="service-block_one-title"><a href="service-network.html">Network <span>Solutions</span></a></h5>
+						<div class="service-block_one-text">Design, setup, and management of secure and stable business networks with proactive monitoring.</div>
+						<a class="theme-btn service-block_one-link" href="service-network.html">View Service Page</a>
+						<div class="service-block_one-overlay" style="background-image:url(images/resource/service-1.jpg)">
+							<div class="service-block_one-text-two">Structured Cabling, Firewall Integration, VLAN Segmentation, Wireless Optimization.</div>
+							<a class="theme-btn service-block_one-link two" href="service-network.html">View Service Page</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service Block One -->
+				<div class="service-block_one item">
+					<div class="service-block_one-inner">
+						<div class="service-block_one-icon"><img src="images/icons/service-34.png" alt="" /></div>
+						<h5 class="service-block_one-title"><a href="service-microsoft-365.html">Microsoft 365 <span>Solutions</span></a></h5>
+						<div class="service-block_one-text">Deployment, hardening, and support for Microsoft 365 to improve collaboration and security.</div>
+						<a class="theme-btn service-block_one-link" href="service-microsoft-365.html">View Service Page</a>
+						<div class="service-block_one-overlay" style="background-image:url(images/resource/service-1.jpg)">
+							<div class="service-block_one-text-two">Exchange Setup, Teams Governance, MFA Rollout, SharePoint Configuration.</div>
+							<a class="theme-btn service-block_one-link two" href="service-microsoft-365.html">View Service Page</a>
 						</div>
 					</div>
 				</div>
@@ -993,9 +1099,37 @@
 <script src="js/magnific-popup.min.js"></script>
 
 <script src="js/script.js"></script>
+<script>
+jQuery(function ($) {
+	var serviceCarousel = $('.service-one-carousel');
+	if (serviceCarousel.length && $.fn.owlCarousel) {
+		serviceCarousel.owlCarousel({
+			loop: true,
+			margin: 8,
+			nav: true,
+			dots: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
+			smartSpeed: 850,
+			navText: [
+				'<span class="fa-solid fa-angle-left"></span>',
+				'<span class="fa-solid fa-angle-right"></span>'
+			],
+			responsive: {
+				0: { items: 1 },
+				576: { items: 2 },
+				992: { items: 3 },
+				1200: { items: 4 }
+			}
+		});
+	}
+});
+</script>
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </body>
 </html>
+
 
