@@ -787,6 +787,15 @@
 	margin-left:0;
 }
 
+/* Center South African flag icon */
+.counter-one_icon.counter-one_flag{
+	position:relative !important;
+	left:auto !important;
+	top:auto !important;
+	margin:0 auto 10px !important;
+	display:block !important;
+}
+
 /* Homepage fluid section cleanup */
 
 .fluid-one--clean{

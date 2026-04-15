@@ -333,6 +333,35 @@
 			}
 		});
 	}
+
+	// Home-style Service One Carousel
+	if ($('.service-one-carousel').length) {
+		$('.service-one-carousel').owlCarousel({
+			loop: true,
+			margin: 8,
+			nav: true,
+			dots: true,
+			autoplay: true,
+			autoplayTimeout: 3000,
+			autoplayHoverPause: true,
+			smartSpeed: 850,
+			navText: [ '<span class="fa-solid fa-angle-left"></span>', '<span class="fa-solid fa-angle-right"></span>' ],
+			responsive:{
+				0:{
+					items:1
+				},
+				576:{
+					items:2
+				},
+				992:{
+					items:3
+				},
+				1200:{
+					items:4
+				}
+			}
+		});
+	}
 	
 	
 	// Four Item Carousel
