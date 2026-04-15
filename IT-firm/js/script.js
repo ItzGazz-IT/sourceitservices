@@ -30,8 +30,20 @@
 			
 		}
 	}
+
+	function injectIconCompatibilityStyles() {
+		if (document.getElementById('fa-icon-compatibility')) {
+			return;
+		}
+
+		var style = document.createElement('style');
+		style.id = 'fa-icon-compatibility';
+		style.textContent = '.fa-handshake-angle:before{content:"\\f4c4"}.fa-cloud-arrow-up:before{content:"\\f382"}.fa-cloud-arrow-down:before{content:"\\f381"}.fa-people-group:before{content:"\\f0c0"}.fa-building-columns:before{content:"\\f19c"}.fa-file-lines:before{content:"\\f15c"}.fa-arrows-up-down:before{content:"\\f362"}.fa-scale-balanced:before{content:"\\f24e"}.fa-house:before{content:"\\f015"}.fa-volume-high:before{content:"\\f028"}';
+		document.head.appendChild(style);
+	}
 	
 	headerStyle();
+	injectIconCompatibilityStyles();
 	
 	
 	
