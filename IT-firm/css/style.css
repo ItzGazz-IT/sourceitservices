@@ -730,16 +730,17 @@
 	transform:rotateY(180deg);
 }
 
-.counter-one_icon.counter-one_flag{
-	display:inline-flex;
-	align-items:center;
+.counter-one_flag{
+	display:flex;
 	justify-content:center;
-	line-height:1;
+	align-items:center;
+	width:100%;
+	margin:0 auto 8px auto;
 }
 
-.counter-one_icon.counter-one_flag img{
-	width:30px;
-	height:auto;
+.counter-one_flag img{
+	width:28px !important;
+	height:auto !important;
 	display:block;
 }
 
