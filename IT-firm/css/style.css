@@ -731,17 +731,17 @@
 }
 
 .counter-one_flag{
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	width:100%;
-	margin:0 auto 8px auto;
+	display:flex !important;
+	justify-content:center !important;
+	align-items:center !important;
 }
 
 .counter-one_flag img{
-	width:28px !important;
+	width:20px !important;
+	max-width:20px !important;
+	min-width:20px !important;
 	height:auto !important;
-	display:block;
+	display:block !important;
 }
 
 .counter-one_inner:hover .counter-one_icon.counter-one_flag{
