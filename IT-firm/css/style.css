@@ -9693,7 +9693,7 @@
 .about-journey-step .inner-box{
 	position:relative;
 	padding:24px 22px;
-	background-color:#eef4fb;
+	background-color:#0f2344;
 	border-left:4px solid var(--color-nine);
 	min-height:100%;
 }
@@ -9701,7 +9701,7 @@
 .about-journey-step .step-no{
 	font-size:var(--font-24);
 	font-weight:700;
-	color:var(--color-nine);
+	color:#0896fc;
 	margin-bottom:10px;
 	font-family:var(--font-family-FiraSans);
 }
@@ -9709,12 +9709,13 @@
 .about-journey-step h6{
 	font-weight:700;
 	margin-bottom:8px;
+	color:#ffffff;
 }
 
 .about-journey-step p{
 	margin-bottom:0px;
 	line-height:1.8em;
-	color:var(--color-six);
+	color:rgba(255,255,255,0.75);
 }
 
 .about-focus{
