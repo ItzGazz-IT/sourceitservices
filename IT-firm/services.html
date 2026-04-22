@@ -24,6 +24,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 <style>
+	.service-two--sleek{
+		position:relative;
+		padding:72px 0 96px;
+		background:linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%);
+		overflow:hidden;
+	}
+
+	.service-two--sleek::before,
+	.service-two--sleek::after{
+		content:"";
+		position:absolute;
+		border-radius:50%;
+		pointer-events:none;
+	}
+
+	.service-two--sleek::before{
+		width:320px;
+		height:320px;
+		left:-140px;
+		top:-90px;
+		background:radial-gradient(circle, rgba(8,150,252,0.18) 0%, rgba(8,150,252,0) 72%);
+	}
+
+	.service-two--sleek::after{
+		width:420px;
+		height:420px;
+		right:-170px;
+		bottom:-220px;
+		background:radial-gradient(circle, rgba(11,90,219,0.16) 0%, rgba(11,90,219,0) 74%);
+	}
+
+	.service-two--sleek .service-grid{
+		position:relative;
+		z-index:2;
+		margin:0 -12px;
+	}
+
+	.service-two--sleek .service-grid .service-block_one{
+		padding:14px 12px;
+		margin-bottom:6px;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-inner{
+		position:relative;
+		margin-top:0;
+		min-height:372px;
+		padding:30px 24px 24px;
+		border-radius:22px;
+		background:linear-gradient(180deg, #ffffff 0%, #f6faff 100%);
+		border:1px solid rgba(11,90,219,0.12);
+		box-shadow:0 16px 34px rgba(16,33,63,0.08);
+		overflow:hidden;
+		transition:transform .32s ease, box-shadow .32s ease, border-color .32s ease;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-inner:hover{
+		transform:translateY(-10px);
+		border-color:rgba(11,90,219,0.28);
+		box-shadow:0 24px 42px rgba(16,33,63,0.14);
+	}
+
+	.service-two--sleek .service-grid .service-block_one-inner::before{
+		content:"";
+		position:absolute;
+		inset:0;
+		background:linear-gradient(120deg, rgba(8,150,252,0) 35%, rgba(8,150,252,0.18) 50%, rgba(8,150,252,0) 64%);
+		transform:translateX(-140%);
+		transition:transform .7s ease;
+		pointer-events:none;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-inner:hover::before{
+		transform:translateX(135%);
+	}
+
+	.service-two--sleek .service-grid .service-block_one-inner::after{
+		content:"";
+		position:absolute;
+		left:0;
+		right:0;
+		top:0;
+		height:5px;
+		background:linear-gradient(90deg, #0b5adb 0%, #11a0ff 100%);
+	}
+
+	.service-two--sleek .service-grid .service-block_one-icon{
+		position:relative;
+		z-index:2;
+		width:82px;
+		height:82px;
+		line-height:76px;
+		border-radius:24px;
+		border:1px solid rgba(11,90,219,0.16);
+		background:linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
+		box-shadow:0 12px 24px rgba(11,90,219,0.12);
+		transition:transform .35s ease, box-shadow .35s ease;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-icon img{
+		max-width:44px;
+		height:auto;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-inner:hover .service-block_one-icon{
+		transform:rotate(-8deg) scale(1.05);
+		box-shadow:0 18px 28px rgba(11,90,219,0.18);
+	}
+
+	.service-two--sleek .service-grid .service-block_one-title{
+		margin-top:22px;
+		margin-bottom:12px;
+		min-height:64px;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-title a{
+		display:block;
+		line-height:1.35em;
+		font-size:30px;
+		transition:color .25s ease;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-inner:hover .service-block_one-title a{
+		color:#0b5adb;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-text{
+		min-height:124px;
+		padding:0;
+		font-size:16px;
+		line-height:1.7em;
+		color:#66748f;
+		margin-top:0;
+		margin-bottom:20px;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-link{
+		position:relative;
+		z-index:2;
+		border-radius:999px;
+		padding:11px 22px;
+		font-size:14px;
+		background:linear-gradient(135deg, #0b5adb 0%, #118dfb 100%);
+		box-shadow:0 12px 22px rgba(11,90,219,0.2);
+		transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+	}
+
+	.service-two--sleek .service-grid .service-block_one-link:hover{
+		transform:translateY(-2px);
+		box-shadow:0 16px 26px rgba(11,90,219,0.28);
+		filter:saturate(1.05);
+	}
+
 	.expect-section{
 		margin-top:40px;
 		padding:46px 32px;
@@ -102,6 +257,23 @@
 	}
 
 	@media only screen and (max-width: 767px){
+		.service-two--sleek{
+			padding:58px 0 72px;
+		}
+
+		.service-two--sleek .service-grid .service-block_one-inner{
+			min-height:334px;
+			padding:26px 18px 20px;
+		}
+
+		.service-two--sleek .service-grid .service-block_one-title a{
+			font-size:26px;
+		}
+
+		.service-two--sleek .service-grid .service-block_one-text{
+			min-height:auto;
+		}
+
 		.expect-section{
 			padding:34px 18px;
 		}
@@ -384,175 +556,96 @@
     <!-- End Page Title -->
 	
 	<!-- Service Two -->
-	<section class="service-two">
+	<section class="service-two service-two--sleek">
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title centered">
 				<div class="sec-title_title">Our Services</div>
 				<h2 class="sec-title_heading">Services To You</h2>
 			</div>
-			<div class="row clearfix">
-				
-				<!-- Service Block Two -->
-				<div class="service-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="service-block_two-image">
-							<img src="images/resource/service-2.jpg" alt="" />
-							<div class="service-block_two-overlay">
-								<div class="service-block_two-icon"><span class="fa-solid fa-wifi" aria-hidden="true"></span></div>
-								<h5 class="service-block_two-title">Connectivity Solutions</h5>
-							</div>
-							<div class="service-block_two-overlay-two">
-								<div class="service-two_overlay-content">
-									<h5 class="service-block_two-title"><a href="service-connectivity.html">Connectivity Solutions</a></h5>
-									<div class="service-block_two-text">Reliable connectivity services that keep your business online, connected, and operational without interruption.</div>
-									<a class="service-block_two-more" href="service-connectivity.html">View Service Page</a>
-								</div>
-							</div>
-						</div>
+			<div class="row clearfix service-grid">
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-1.png" alt="Connectivity icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-connectivity.html">Connectivity <span>Solutions</span></a></h5>
+						<div class="service-block_one-text">Reliable connectivity services that keep your business online, connected, and operational without interruption.</div>
+						<a class="theme-btn service-block_one-link" href="service-connectivity.html">View Service Page</a>
 					</div>
 				</div>
-				
-				<!-- Service Block Two -->
-				<div class="service-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
-						<div class="service-block_two-image">
-							<img src="images/resource/service-3.jpg" alt="" />
-							<div class="service-block_two-overlay">
-								<div class="service-block_two-icon"><span class="fa-solid fa-cloud" aria-hidden="true"></span></div>
-								<h5 class="service-block_two-title">Cloud Solutions</h5>
-							</div>
-							<div class="service-block_two-overlay-two">
-								<div class="service-two_overlay-content">
-									<h5 class="service-block_two-title"><a href="service-cloud.html">Cloud Solutions</a></h5>
-									<div class="service-block_two-text">Secure and scalable cloud services to store, manage, and access your systems and data from anywhere.</div>
-									<a class="service-block_two-more" href="service-cloud.html">View Service Page</a>
-								</div>
-							</div>
-						</div>
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-2.png" alt="Cloud icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-cloud.html">Cloud <span>Solutions</span></a></h5>
+						<div class="service-block_one-text">Secure and scalable cloud services to store, manage, and access your systems and data from anywhere.</div>
+						<a class="theme-btn service-block_one-link" href="service-cloud.html">View Service Page</a>
 					</div>
 				</div>
-				
-				<!-- Service Block Two -->
-				<div class="service-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-						<div class="service-block_two-image">
-							<img src="images/resource/service-4.jpg" alt="" />
-							<div class="service-block_two-overlay">
-								<div class="service-block_two-icon"><span class="fa-solid fa-shield-alt" aria-hidden="true"></span></div>
-								<h5 class="service-block_two-title">Cyber Security</h5>
-							</div>
-							<div class="service-block_two-overlay-two">
-								<div class="service-two_overlay-content">
-									<h5 class="service-block_two-title"><a href="service-cyber-security.html">Cyber Security</a></h5>
-									<div class="service-block_two-text">Advanced protection for your users, data, and infrastructure against modern digital threats.</div>
-									<a class="service-block_two-more" href="service-cyber-security.html">View Service Page</a>
-								</div>
-							</div>
-						</div>
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-3.png" alt="Cyber security icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-cyber-security.html">Cyber <span>Security</span></a></h5>
+						<div class="service-block_one-text">Advanced protection for your users, data, and infrastructure against modern digital threats.</div>
+						<a class="theme-btn service-block_one-link" href="service-cyber-security.html">View Service Page</a>
 					</div>
 				</div>
-				
-				<!-- Service Block Two -->
-				<div class="service-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="450ms" data-wow-duration="1500ms">
-						<div class="service-block_two-image">
-							<img src="images/resource/service-5.jpg" alt="" />
-							<div class="service-block_two-overlay">
-								<div class="service-block_two-icon"><span class="fa-solid fa-comments" aria-hidden="true"></span></div>
-								<h5 class="service-block_two-title">Communication Solutions</h5>
-							</div>
-							<div class="service-block_two-overlay-two">
-								<div class="service-two_overlay-content">
-									<h5 class="service-block_two-title"><a href="service-communication.html">Communication Solutions</a></h5>
-									<div class="service-block_two-text">Modern voice and collaboration systems that improve internal and customer communication.</div>
-									<a class="service-block_two-more" href="service-communication.html">View Service Page</a>
-								</div>
-							</div>
-						</div>
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-4.png" alt="Communication icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-communication.html">Communication <span>Solutions</span></a></h5>
+						<div class="service-block_one-text">Modern voice and collaboration systems that improve internal and customer communication.</div>
+						<a class="theme-btn service-block_one-link" href="service-communication.html">View Service Page</a>
 					</div>
 				</div>
-				
-				<!-- Service Block Two -->
-				<div class="service-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-						<div class="service-block_two-image">
-							<img src="images/resource/service-6.jpg" alt="" />
-							<div class="service-block_two-overlay">
-								<div class="service-block_two-icon"><span class="fa-solid fa-network-wired" aria-hidden="true"></span></div>
-								<h5 class="service-block_two-title">Network Solutions</h5>
-							</div>
-							<div class="service-block_two-overlay-two">
-								<div class="service-two_overlay-content">
-									<h5 class="service-block_two-title"><a href="service-network.html">Network Solutions</a></h5>
-									<div class="service-block_two-text">Design, installation, and management of fast, secure, and stable business network infrastructure.</div>
-									<a class="service-block_two-more" href="service-network.html">View Service Page</a>
-								</div>
-							</div>
-						</div>
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-31.png" alt="Network icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-network.html">Network <span>Solutions</span></a></h5>
+						<div class="service-block_one-text">Design, installation, and management of fast, secure, and stable business network infrastructure.</div>
+						<a class="theme-btn service-block_one-link" href="service-network.html">View Service Page</a>
 					</div>
 				</div>
-				
-				<!-- Service Block Two -->
-				<div class="service-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
-						<div class="service-block_two-image">
-							<img src="images/resource/service-7.jpg" alt="" />
-							<div class="service-block_two-overlay">
-								<div class="service-block_two-icon"><span class="fa-solid fa-code" aria-hidden="true"></span></div>
-								<h5 class="service-block_two-title">Web &amp; App Development</h5>
-							</div>
-							<div class="service-block_two-overlay-two">
-								<div class="service-two_overlay-content">
-									<h5 class="service-block_two-title"><a href="service-web-app-development.html">Web &amp; App Development</a></h5>
-									<div class="service-block_two-text">Custom websites and applications built to support business goals and deliver clear user value.</div>
-									<a class="service-block_two-more" href="service-web-app-development.html">View Service Page</a>
-								</div>
-							</div>
-						</div>
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-5.png" alt="Web and app icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-web-app-development.html">Web &amp; App <span>Development</span></a></h5>
+						<div class="service-block_one-text">Custom websites and applications built to support business goals and deliver clear user value.</div>
+						<a class="theme-btn service-block_one-link" href="service-web-app-development.html">View Service Page</a>
 					</div>
 				</div>
-				
-				<!-- Service Block Two -->
-				<div class="service-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-						<div class="service-block_two-image">
-							<img src="images/resource/service-8.jpg" alt="" />
-							<div class="service-block_two-overlay">
-								<div class="service-block_two-icon"><span class="fa-solid fa-video" aria-hidden="true"></span></div>
-								<h5 class="service-block_two-title">Security Systems</h5>
-							</div>
-							<div class="service-block_two-overlay-two">
-								<div class="service-two_overlay-content">
-									<h5 class="service-block_two-title"><a href="service-security-systems.html">Security Systems</a></h5>
-									<div class="service-block_two-text">Integrated physical security systems to protect people, premises, and assets.</div>
-									<a class="service-block_two-more" href="service-security-systems.html">View Service Page</a>
-								</div>
-							</div>
-						</div>
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-6.png" alt="Security systems icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-security-systems.html">Security <span>Systems</span></a></h5>
+						<div class="service-block_one-text">Integrated physical security systems to protect people, premises, and assets.</div>
+						<a class="theme-btn service-block_one-link" href="service-security-systems.html">View Service Page</a>
 					</div>
 				</div>
-				
-				<!-- Service Block Two -->
-				<div class="service-block_two col-lg-3 col-md-6 col-sm-12">
-					<div class="service-block_two-inner wow fadeInLeft" data-wow-delay="450ms" data-wow-duration="1500ms">
-						<div class="service-block_two-image">
-							<img src="images/resource/service-9.jpg" alt="" />
-							<div class="service-block_two-overlay">
-								<div class="service-block_two-icon"><span class="fa-brands fa-microsoft" aria-hidden="true"></span></div>
-								<h5 class="service-block_two-title">Microsoft 365 Solutions</h5>
-							</div>
-							<div class="service-block_two-overlay-two">
-								<div class="service-two_overlay-content">
-									<h5 class="service-block_two-title"><a href="service-microsoft-365.html">Microsoft 365 Solutions</a></h5>
-									<div class="service-block_two-text">Deployment and support for Microsoft 365 to keep teams productive, secure, and connected.</div>
-									<a class="service-block_two-more" href="service-microsoft-365.html">View Service Page</a>
-								</div>
-							</div>
-						</div>
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-34.png" alt="Microsoft 365 icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-microsoft-365.html">Microsoft 365 <span>Solutions</span></a></h5>
+						<div class="service-block_one-text">Deployment and support for Microsoft 365 to keep teams productive, secure, and connected.</div>
+						<a class="theme-btn service-block_one-link" href="service-microsoft-365.html">View Service Page</a>
 					</div>
 				</div>
-				
+
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+						<div class="service-block_one-icon"><img src="images/icons/service-3.png" alt="Service overview icon" /></div>
+						<h5 class="service-block_one-title"><a href="service-detail.html">Service <span>Overview</span></a></h5>
+						<div class="service-block_one-text">See the full service framework, delivery model, and engagement process behind our IT support offering.</div>
+						<a class="theme-btn service-block_one-link" href="service-detail.html">View Service Page</a>
+					</div>
+				</div>
+
 			</div>
 
 			<div class="expect-section text-center">
@@ -644,7 +737,7 @@
 					<div class="sec-title">
 						<div class="sec-title_title">Response Times That Keep You Moving</div>
 						<h2 class="sec-title_heading">Clear support delivery for <span class="theme_color">business continuity</span></h2>
-						<div class="sec-title_text">We deliver structured, responsive support that prioritises business impact. Issues are assessed quickly, communicated clearly, and resolved through practical actions that minimise disruption and reduce downtime.div>
+						<div class="sec-title_text">We deliver structured, responsive support that prioritises business impact. Issues are assessed quickly, communicated clearly, and resolved through practical actions that minimise disruption and reduce downtime.</div>
 					</div>
 					<div class="row clearfix">
 						
