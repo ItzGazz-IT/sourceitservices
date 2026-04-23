@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -27,7 +27,10 @@
 	.service-two--sleek{
 		position:relative;
 		padding:72px 0 96px;
-		background:linear-gradient(180deg, #eef5ff 0%, #f7fbff 100%);
+		background-color:#f8faff;
+		background-image:
+			radial-gradient(circle, rgba(4,45,128,0.10) 1px, transparent 1px);
+		background-size:28px 28px;
 		overflow:hidden;
 	}
 
@@ -44,7 +47,7 @@
 		height:320px;
 		left:-140px;
 		top:-90px;
-		background:radial-gradient(circle, rgba(8,150,252,0.18) 0%, rgba(8,150,252,0) 72%);
+		background:radial-gradient(circle, rgba(5,100,200,0.22) 0%, rgba(5,100,200,0) 72%);
 	}
 
 	.service-two--sleek::after{
@@ -52,18 +55,20 @@
 		height:420px;
 		right:-170px;
 		bottom:-220px;
-		background:radial-gradient(circle, rgba(11,90,219,0.16) 0%, rgba(11,90,219,0) 74%);
+		background:radial-gradient(circle, rgba(7,65,170,0.20) 0%, rgba(7,65,170,0) 74%);
 	}
 
 	.service-two--sleek .service-grid{
 		position:relative;
 		z-index:2;
 		margin:0 -12px;
+		align-items:stretch;
 	}
 
 	.service-two--sleek .service-grid .service-block_one{
 		padding:14px 12px;
 		margin-bottom:6px;
+		display:flex;
 	}
 
 	.service-two--sleek .service-grid .service-block_one-inner{
@@ -71,24 +76,29 @@
 		margin-top:0;
 		min-height:372px;
 		padding:30px 24px 24px;
+		width:100%;
+		height:100%;
+		display:flex;
+		flex-direction:column;
 		border-radius:22px;
 		background:linear-gradient(180deg, #ffffff 0%, #f6faff 100%);
-		border:1px solid rgba(11,90,219,0.12);
-		box-shadow:0 16px 34px rgba(16,33,63,0.08);
+		border:1px solid rgba(7,65,170,0.18);
+		box-shadow:0 16px 34px rgba(7,30,80,0.10);
 		overflow:hidden;
 		transition:transform .32s ease, box-shadow .32s ease, border-color .32s ease;
 	}
 
 	.service-two--sleek .service-grid .service-block_one-inner:hover{
 		transform:translateY(-10px);
-		border-color:rgba(11,90,219,0.28);
-		box-shadow:0 24px 42px rgba(16,33,63,0.14);
+		border-color:rgba(7,65,170,0.42);
+		box-shadow:0 24px 42px rgba(7,30,80,0.18);
 	}
 
 	.service-two--sleek .service-grid .service-block_one-inner::before{
 		content:"";
 		position:absolute;
 		inset:0;
+		z-index:0;
 		background:linear-gradient(120deg, rgba(8,150,252,0) 35%, rgba(8,150,252,0.18) 50%, rgba(8,150,252,0) 64%);
 		transform:translateX(-140%);
 		transition:transform .7s ease;
@@ -106,7 +116,8 @@
 		right:0;
 		top:0;
 		height:5px;
-		background:linear-gradient(90deg, #0b5adb 0%, #11a0ff 100%);
+		z-index:0;
+		background:linear-gradient(90deg, #042d80 0%, #0550a8 100%);
 	}
 
 	.service-two--sleek .service-grid .service-block_one-icon{
@@ -116,9 +127,9 @@
 		height:82px;
 		line-height:76px;
 		border-radius:24px;
-		border:1px solid rgba(11,90,219,0.16);
-		background:linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
-		box-shadow:0 12px 24px rgba(11,90,219,0.12);
+		border:1px solid rgba(7,65,170,0.22);
+		background:linear-gradient(180deg, #ffffff 0%, #e6eeff 100%);
+		box-shadow:0 12px 24px rgba(7,65,170,0.16);
 		transition:transform .35s ease, box-shadow .35s ease;
 		display:flex;
 		align-items:center;
@@ -132,13 +143,15 @@
 
 	.service-two--sleek .service-grid .service-block_one-inner:hover .service-block_one-icon{
 		transform:rotate(-8deg) scale(1.05);
-		box-shadow:0 18px 28px rgba(11,90,219,0.18);
+		box-shadow:0 18px 28px rgba(7,65,170,0.26);
 	}
 
 	.service-two--sleek .service-grid .service-block_one-title{
 		margin-top:22px;
 		margin-bottom:12px;
 		min-height:64px;
+		position:relative;
+		z-index:2;
 	}
 
 	.service-two--sleek .service-grid .service-block_one-title a{
@@ -149,34 +162,255 @@
 	}
 
 	.service-two--sleek .service-grid .service-block_one-inner:hover .service-block_one-title a{
-		color:#0b5adb;
+		color:var(--black-color);
 	}
 
 	.service-two--sleek .service-grid .service-block_one-text{
 		min-height:124px;
+		flex:1 1 auto;
 		padding:0;
 		font-size:16px;
 		line-height:1.7em;
-		color:#66748f;
+		color:#66748f !important;
 		margin-top:0;
 		margin-bottom:20px;
+		position:relative;
+		z-index:2;
 	}
 
 	.service-two--sleek .service-grid .service-block_one-link{
 		position:relative;
 		z-index:2;
+		align-self:flex-start;
+		margin-top:auto;
 		border-radius:999px;
 		padding:11px 22px;
 		font-size:14px;
-		background:linear-gradient(135deg, #0b5adb 0%, #118dfb 100%);
-		box-shadow:0 12px 22px rgba(11,90,219,0.2);
+		background:linear-gradient(135deg, #042d80 0%, #0550a8 100%);
+		box-shadow:0 12px 22px rgba(7,65,170,0.28);
 		transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
 	}
 
 	.service-two--sleek .service-grid .service-block_one-link:hover{
 		transform:translateY(-2px);
-		box-shadow:0 16px 26px rgba(11,90,219,0.28);
+		box-shadow:0 16px 26px rgba(7,65,170,0.38);
 		filter:saturate(1.05);
+	}
+
+	.service-one--uniform{
+		position:relative;
+		padding:72px 0 96px;
+		background-color:#f8faff;
+		background-image:
+			radial-gradient(circle, rgba(4,45,128,0.10) 1px, transparent 1px);
+		background-size:28px 28px;
+		overflow:hidden;
+	}
+
+	.service-one--uniform::before,
+	.service-one--uniform::after{
+		content:"";
+		position:absolute;
+		border-radius:50%;
+		pointer-events:none;
+	}
+
+	.service-one--uniform::before{
+		width:320px;
+		height:320px;
+		left:-140px;
+		top:-90px;
+		background:radial-gradient(circle, rgba(5,100,200,0.22) 0%, rgba(5,100,200,0) 72%);
+	}
+
+	.service-one--uniform::after{
+		width:420px;
+		height:420px;
+		right:-170px;
+		bottom:-220px;
+		background:radial-gradient(circle, rgba(7,65,170,0.20) 0%, rgba(7,65,170,0) 74%);
+	}
+
+	.service-one--uniform .service-one-carousel{
+		position:relative;
+		z-index:2;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one{
+		padding:14px 12px;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-inner{
+		position:relative;
+		margin-top:0;
+		min-height:372px;
+		padding:30px 24px 24px;
+		border-radius:22px;
+		background:linear-gradient(180deg, #ffffff 0%, #f6faff 100%);
+		border:1px solid rgba(7,65,170,0.18);
+		box-shadow:0 16px 34px rgba(7,30,80,0.10);
+		overflow:hidden;
+		transition:transform .32s ease, box-shadow .32s ease, border-color .32s ease;
+		display:flex;
+		flex-direction:column;
+		height:100%;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-inner:hover{
+		transform:translateY(-10px);
+		border-color:rgba(7,65,170,0.42);
+		box-shadow:0 24px 42px rgba(7,30,80,0.18);
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-inner::before{
+		content:"";
+		position:absolute;
+		inset:0;
+		z-index:0;
+		background:linear-gradient(120deg, rgba(8,150,252,0) 35%, rgba(8,150,252,0.18) 50%, rgba(8,150,252,0) 64%);
+		transform:translateX(-140%);
+		transition:transform .7s ease;
+		pointer-events:none;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-inner:hover::before{
+		transform:translateX(135%);
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-inner::after{
+		content:"";
+		position:absolute;
+		left:0;
+		right:0;
+		top:0;
+		height:5px;
+		z-index:0;
+		background:linear-gradient(90deg, #042d80 0%, #0550a8 100%);
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-icon{
+		position:relative;
+		z-index:2;
+		width:82px;
+		height:82px;
+		line-height:76px;
+		border-radius:24px;
+		border:1px solid rgba(7,65,170,0.22);
+		background:linear-gradient(180deg, #ffffff 0%, #e6eeff 100%);
+		box-shadow:0 12px 24px rgba(7,65,170,0.16);
+		transition:transform .35s ease, box-shadow .35s ease;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-inner:hover .service-block_one-icon{
+		transform:rotate(-8deg) scale(1.05);
+		box-shadow:0 18px 28px rgba(7,65,170,0.26);
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-title{
+		margin-top:22px;
+		margin-bottom:12px;
+		min-height:64px;
+		position:relative;
+		z-index:2;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-title a{
+		display:block;
+		line-height:1.35em;
+		font-size:30px;
+		transition:color .25s ease;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-inner:hover .service-block_one-title a{
+		color:var(--black-color);
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-text{
+		min-height:124px;
+		padding:0;
+		font-size:16px;
+		line-height:1.7em;
+		color:#66748f !important;
+		margin-top:0;
+		margin-bottom:20px;
+		flex:1 1 auto;
+		position:relative;
+		z-index:2;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-link{
+		position:relative;
+		z-index:2;
+		border-radius:999px;
+		padding:11px 22px;
+		font-size:14px;
+		background:linear-gradient(135deg, #042d80 0%, #0550a8 100%);
+		box-shadow:0 12px 22px rgba(7,65,170,0.28);
+		transition:transform .25s ease, box-shadow .25s ease, filter .25s ease;
+		align-self:flex-start;
+		margin-top:auto;
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-link:hover{
+		transform:translateY(-2px);
+		box-shadow:0 16px 26px rgba(7,65,170,0.38);
+		filter:saturate(1.05);
+	}
+
+	.service-one--uniform .service-one-carousel .service-block_one-overlay{
+		display:none;
+	}
+
+	.service-one--uniform .service-one-carousel .owl-stage-outer{
+		padding:10px 0 30px;
+	}
+
+	.service-one--uniform .service-one-carousel .owl-nav{
+		text-align:center;
+		margin-top:4px;
+	}
+
+	.service-one--uniform .service-one-carousel .owl-nav .owl-prev,
+	.service-one--uniform .service-one-carousel .owl-nav .owl-next{
+		width:46px;
+		height:46px;
+		line-height:46px;
+		display:inline-block;
+		margin:0 7px;
+		border-radius:50%;
+		font-size:16px;
+		background:#ffffff;
+		color:#042d80;
+		box-shadow:0 10px 24px rgba(7,65,170,0.18);
+		transition:all .25s ease;
+	}
+
+	.service-one--uniform .service-one-carousel .owl-nav .owl-prev:hover,
+	.service-one--uniform .service-one-carousel .owl-nav .owl-next:hover{
+		color:#ffffff;
+		background:#042d80;
+		transform:translateY(-2px);
+	}
+
+	.service-one--uniform .service-one-carousel .owl-dots{
+		text-align:center;
+		margin-top:10px;
+	}
+
+	.service-one--uniform .service-one-carousel .owl-dots .owl-dot{
+		width:10px;
+		height:10px;
+		border-radius:50%;
+		margin:0 4px;
+		background:#c7d8f6;
+		display:inline-block;
+		transition:all .25s ease;
+	}
+
+	.service-one--uniform .service-one-carousel .owl-dots .owl-dot.active,
+	.service-one--uniform .service-one-carousel .owl-dots .owl-dot:hover{
+		background:#042d80;
+		transform:scale(1.18);
 	}
 
 	.expect-section{
@@ -271,6 +505,18 @@
 		}
 
 		.service-two--sleek .service-grid .service-block_one-text{
+			min-height:auto;
+		}
+
+		.service-one--uniform .service-one-carousel .service-block_one-inner{
+			min-height:334px;
+		}
+
+		.service-one--uniform .service-one-carousel .service-block_one-title{
+			min-height:auto;
+		}
+
+		.service-one--uniform .service-one-carousel .service-block_one-text{
 			min-height:auto;
 		}
 
@@ -427,34 +673,8 @@
 
 								<li><a href="index.html">Home</a></li>
 									<li><a href="about.html">About Us</a></li>
-									<li class="dropdown"><a href="#">Services</a>
-<ul>
-<li class="current"><a href="services.html">Services</a></li>
-<li><a href="service-connectivity.html">Connectivity Solutions</a></li>
-<li><a href="service-cloud.html">Cloud Solutions</a></li>
-<li><a href="service-cyber-security.html">Cyber Security</a></li>
-<li><a href="service-communication.html">Communication Solutions</a></li>
-<li><a href="service-network.html">Network Solutions</a></li>
-<li><a href="service-web-app-development.html">Web &amp; App Development</a></li>
-<li><a href="service-security-systems.html">Security Systems</a></li>
-<li><a href="service-microsoft-365.html">Microsoft 365 Solutions</a></li>
-<li><a href="service-detail.html">Service Overview</a></li>
-</ul>
-</li>
-									<li class="dropdown"><a href="#">Project</a>
-										<ul>
-											<li><a href="project.html">project</a></li>
-											<li><a href="project-detail.html">project Detail</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="#">Blog</a>
-										<ul>
-											<li><a href="blog.html">Our Blog</a></li>
-											<li><a href="blog-detail.html">Blog Detail</a></li>
-											<li><a href="not-found.html">Not Found</a></li>
-										</ul>
-									</li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
 								</ul>
 							</div>
 							
@@ -493,10 +713,10 @@
 							
 							<!-- Button Box -->
 							<div class="button-box">
-								<a class="btn-style-three theme-btn btn-item" href="contact.html">
+								<a class="btn-style-three theme-btn btn-item" href="mailto:support@itserv.co.za?subject=Support%20Ticket">
 									<div class="btn-wrap">
-										<span class="text-one">Get a quote <i class="fa-solid fa-arrow-right fa-fw"></i></span>
-										<span class="text-two">Get a quote <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										<span class="text-one">Log a ticket <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										<span class="text-two">Log a ticket <i class="fa-solid fa-arrow-right fa-fw"></i></span>
 									</div>
 								</a>
 							</div>
@@ -619,7 +839,7 @@
 					</div>
 				</div>
 
-				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
+				<div class="service-block_one col-lg-4 col-md-6 col-sm-12 offset-lg-2">
 					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 						<div class="service-block_one-icon"><img src="images/icons/service-6.png" alt="Security systems icon" /></div>
 						<h5 class="service-block_one-title"><a href="service-security-systems.html">Security <span>Systems</span></a></h5>
@@ -637,14 +857,7 @@
 					</div>
 				</div>
 
-				<div class="service-block_one col-lg-4 col-md-6 col-sm-12">
-					<div class="service-block_one-inner wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-						<div class="service-block_one-icon"><img src="images/icons/service-3.png" alt="Service overview icon" /></div>
-						<h5 class="service-block_one-title"><a href="service-detail.html">Service <span>Overview</span></a></h5>
-						<div class="service-block_one-text">See the full service framework, delivery model, and engagement process behind our IT support offering.</div>
-						<a class="theme-btn service-block_one-link" href="service-detail.html">View Service Page</a>
-					</div>
-				</div>
+
 
 			</div>
 
@@ -659,7 +872,7 @@
 						<div class="expect-card">
 							<div class="expect-icon"><span class="fa-solid fa-shield-alt" aria-hidden="true"></span></div>
 							<h5>Consistent Quality</h5>
-							<p>Solutions are designed, implemented, and supported against defined standards. This ensures performance, security, and reliability remain consistent—regardless of scale or complexity.</p>
+							<p>Solutions are designed, implemented, and supported against defined standards. This ensures performance, security, and reliability remain consistent — regardless of scale or complexity.</p>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
@@ -673,14 +886,14 @@
 						<div class="expect-card">
 							<div class="expect-icon"><span class="fa-solid fa-comments" aria-hidden="true"></span></div>
 							<h5>Clear Communication</h5>
-							<p>Clients are kept informed at every stage, with full visibility into current status, next steps, and expected outcomes—so nothing is unclear or unexpected.</p>
+							<p>Clients are kept informed at every stage, with full visibility into current status, next steps, and expected outcomes — so nothing is unclear or unexpected.</p>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-12">
 						<div class="expect-card">
 							<div class="expect-icon"><span class="fa-solid fa-headset" aria-hidden="true"></span></div>
 							<h5>Dependable Support</h5>
-							<p>Our responsibility doesn’t end at delivery. We remain engaged to optimise systems, resolve issues, and support ongoing operational and business growth.</p>
+							<p>Our responsibility doesn't end at delivery. We remain engaged to optimise systems, resolve issues, and support ongoing operational and business growth.</p>
 						</div>
 					</div>
 				</div>
@@ -751,7 +964,7 @@
 								<ul class="fluid-one_list">
 									<li>Monitoring and support for critical connectivity to ensure consistent access and performance.</li>
 									<li>Operational support across cloud services, collaboration platforms, and data protection systems.</li>
-									<li>Secure, responsive support for end‑user devices with clear escalation and ownership.</li>
+									<li>Secure, responsive support for end-user devices with clear escalation and ownership.</li>
 								</ul>
 							</div>
 						</div>
@@ -764,9 +977,9 @@
 							<h5 class="fluid-block_title">How We Deliver</h5>
 							<div class="fluid-block_text">
 								<ul class="fluid-one_list">
-									<li>Incidents are evaluated based on impact and urgency—not guesswork.</li>
+									<li>Incidents are evaluated based on impact and urgencyï¿½not guesswork.</li>
 									<li>Changes and fixes are executed carefully to restore service without introducing further risk.</li>
-									<li>Ongoing monitoring and improvement help prevent repeat issues and long‑term instability.</li>
+									<li>Ongoing monitoring and improvement help prevent repeat issues and long-term instability.</li>
 								</ul>
 							</div>
 						</div>
@@ -781,7 +994,7 @@
 	
 	
 	<!-- Service One -->
-	<section class="service-one">
+	<section class="service-one service-one--uniform">
 		<div class="auto-container">
 			<div class="service-one-carousel owl-carousel owl-theme">
 				<div class="service-block_one item"><div class="service-block_one-inner"><div class="service-block_one-icon" style="display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-user-check" style="font-size:2.2rem;color:#0b5adb;"></i></div><h5 class="service-block_one-title"><a href="contact.html">Clear Ownership</a></h5><div class="service-block_one-text">Every engagement has defined accountability so you always know who to call and what outcomes to expect.</div><a class="theme-btn service-block_one-link" href="contact.html">Get a Quote</a></div></div>
@@ -817,45 +1030,58 @@
 			<!-- Widgets Section -->
 			<div class="widgets-section">
 				<div class="row clearfix">
-					
-					<!-- Big Column -->
-					<div class="big-column col-lg-7 col-md-12 col-sm-12">
-						<div class="row clearfix">
-							
-							<!-- Footer Column -->
-							<div class="footer-column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget logo-widget">
-									<div class="brand-text">
-										<a href="index.html"><span>Source</span> IT Services</a>
-									</div>
-									<div class="text">Reliable managed IT, cloud, and communications solutions built for modern South African businesses.</div>
-								</div>
+
+					<!-- Brand Column -->
+					<div class="footer-column col-lg-4 col-md-6 col-sm-12">
+						<div class="footer-widget logo-widget">
+							<div class="brand-text">
+								<a href="index.html"><span>Source</span> IT Services</a>
 							</div>
-							
-							<!-- Footer Column -->
-							<div class="footer-column col-lg-6 col-md-6 col-sm-12">
-								<div class="footer-widget newsletter-widget">
-									<h4>Talk To Us</h4>
-									<div class="text">Reach out for a quote, support request, or service discussion. We are available on phone, email, and WhatsApp.</div>
-									<div class="text"><a href="tel:+27100065557">Call: (010) 006-5557</a></div>
-									<div class="text"><a href="mailto:support@itserv.co.za">Email: support@itserv.co.za</a></div>
-									<div class="text"><a href="https://wa.me/27837754514" target="_blank" rel="noopener noreferrer">WhatsApp: +27 83 775 4514</a></div>
-									<ul class="social-box">
-										<li><a href="https://www.facebook.com/people/Source-It-Services/61587054354144/" class="fa-brands fa-facebook-f fa-fw"></a></li>
-										<li><a href="https://www.instagram.com/source.itservices/" class="fa-brands fa-instagram fa-fw"></a></li>
-										<li><a href="https://wa.me/27837754514" class="fa-brands fa-whatsapp fa-fw"></a></li>
-									</ul>
-								</div>
-							</div>
-							
+							<div class="text">Reliable managed IT, cloud, and communications solutions built for modern South African businesses.</div>
+							<ul class="social-box" style="margin-top:20px;">
+								<li><a href="https://www.facebook.com/people/Source-It-Services/61587054354144/" class="fa-brands fa-facebook-f fa-fw"></a></li>
+								<li><a href="https://www.instagram.com/source.itservices/" class="fa-brands fa-instagram fa-fw"></a></li>
+								<li><a href="https://wa.me/27837754514" class="fa-brands fa-whatsapp fa-fw"></a></li>
+							</ul>
 						</div>
 					</div>
-					
+
+					<!-- Quick Links Column -->
+					<div class="footer-column col-lg-4 col-md-6 col-sm-12">
+						<div class="footer-widget">
+							<h4>Quick Links</h4>
+							<ul class="footer-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+						</div>
+					</div>
+
+					<!-- Contact & Ticket Column -->
+					<div class="footer-column col-lg-4 col-md-12 col-sm-12">
+						<div class="footer-widget newsletter-widget">
+							<h4>Talk To Us</h4>
+							<div class="text"><a href="tel:+27100065557"><i class="fa fa-solid fa-phone fa-fw"></i> (010) 006-5557</a></div>
+							<div class="text"><a href="mailto:support@itserv.co.za"><i class="fa fa-solid fa-envelope fa-fw"></i> support@itserv.co.za</a></div>
+							<div class="text"><a href="https://wa.me/27837754514" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp fa-fw"></i> +27 83 775 4514</a></div>
+							<div style="margin-top:24px;">
+								<a class="theme-btn btn-style-three btn-item footer-ticket-btn" href="mailto:support@itserv.co.za?subject=Support%20Ticket">
+									<div class="btn-wrap">
+										<span class="text-one"><i class="fa-solid fa-ticket fa-fw"></i> Log a ticket</span>
+										<span class="text-two"><i class="fa-solid fa-ticket fa-fw"></i> Log a ticket</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 			
 			<div class="footer-bottom">
-				<div class="copyright">2026 &copy; All rights reserved by <a href="index.html">Source IT Services</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms</a> | <a href="popia-notice.html">POPIA</a> | <a href="cookie-policy.html">Cookies</a></div>
+				<div class="copyright">2026 &copy; All rights reserved by <a href="index.html">Source IT Services</a></div>
 			</div>
 			
 		</div>

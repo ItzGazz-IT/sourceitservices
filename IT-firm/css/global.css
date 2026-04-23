@@ -68,13 +68,13 @@
 
 :root {
 	
-	/* #0b5adb in decimal RGB */
-  --main-color: rgb(11,90,219);
-  --main-color-rgb:11,90,219;
+	/* #042d80 in decimal RGB */
+  --main-color: rgb(4,45,128);
+  --main-color-rgb:4,45,128;
   
-  /* #0896fc in decimal RGB */
-  --color-two: rgb(8,150,252);
-  --color-two-rgb:8,150,252;
+  /* #0550a8 in decimal RGB */
+  --color-two: rgb(5,80,168);
+  --color-two-rgb:5,80,168;
   
   /* #000611 in decimal RGB */
   --color-three: rgb(0,6,17);
