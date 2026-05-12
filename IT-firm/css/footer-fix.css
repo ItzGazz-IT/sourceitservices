@@ -1,0 +1,106 @@
+﻿/* Footer cleanup */
+.main-footer .widgets-section .row {
+  row-gap: 18px;
+}
+
+.main-footer .footer-column {
+  margin-bottom: 8px;
+}
+
+.main-footer .footer-widget {
+  margin-bottom: 10px;
+}
+
+.main-footer .footer-widget h4 {
+  margin-bottom: 14px;
+}
+
+.main-footer .newsletter-widget {
+  display: block;
+}
+
+.main-footer .newsletter-widget .text {
+  margin-bottom: 10px;
+}
+
+.main-footer .newsletter-widget > div[style*="margin-top:24px"] {
+  margin-top: 10px !important;
+}
+
+.main-footer .footer-ticket-btn {
+  display: inline-block;
+  min-width: 210px;
+}
+
+.main-footer .footer-ticket-btn .btn-wrap span {
+  white-space: nowrap;
+}
+
+.main-footer .footer-support-embed {
+  display: none !important;
+}
+
+/* ── Floating support button ─────────────────────────────── */
+.floating-support-btn {
+  position: fixed !important;
+  left: 28px !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin-left: 0 !important;
+  transform: translate3d(0, -50%, 0) !important;
+  width: 50px !important;
+  height: 50px !important;
+  background: linear-gradient(160deg, #0b5adb 0%, #1287ff 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.92) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 8px 18px rgba(11, 90, 219, 0.35) !important;
+  z-index: 2147483646 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  font-size: 18px !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.floating-support-btn i {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.floating-support-btn:hover {
+  transform: translate3d(0, -50%, 0) scale(1.05) !important;
+  box-shadow: 0 10px 22px rgba(11, 90, 219, 0.46) !important;
+}
+
+.whatsapp-widget-fixed {
+  z-index: 2147483647 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .main-footer .footer-ticket-btn {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .floating-support-btn {
+    width: 44px !important;
+    height: 44px !important;
+    left: 16px !important;
+    font-size: 17px !important;
+  }
+
+  .floating-support-btn i {
+    font-size: 16px !important;
+  }
+}

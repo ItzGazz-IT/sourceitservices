@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -22,6 +22,116 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
+<style>
+.floating-support-btn{
+position:fixed;
+left:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:linear-gradient(135deg, #007bff, #0056b3);
+border:none;
+border-radius:50%;
+cursor:pointer;
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+color:#ffffff;
+z-index:999;
+transition:all 0.3s ease;
+}
+
+.floating-support-btn:hover{
+transform:scale(1.1);
+box-shadow:0 6px 16px rgba(0,0,0,0.4);
+}
+
+.footer-ticket-btn{
+display:inline-block;
+min-width:200px;
+}
+
+.main-footer .widgets-section .row{
+row-gap:18px;
+}
+
+.footer-support-embed{
+margin-top:14px;
+padding:10px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.18);
+border-radius:10px;
+max-width:100%;
+}
+
+.footer-support-title{
+display:block;
+margin-bottom:6px;
+font-size:14px;
+font-weight:600;
+color:#ffffff;
+}
+
+.footer-support-note{
+display:none;
+}
+
+.footer-support-embed iframe{
+display:block;
+width:100%;
+height:150px;
+border:1px solid rgba(255,255,255,0.22);
+border-radius:8px;
+background:#ffffff;
+}
+
+.footer-ticket-btn{
+display:inline-block;
+min-width:200px;
+}
+
+.main-footer .widgets-section .row{
+row-gap:18px;
+}
+
+.footer-widget.newsletter-widget{
+display:block;
+}
+
+@media only screen and (min-width:992px){
+.main-footer .widgets-section .row{
+display:grid;
+grid-template-columns:minmax(0,1.1fr) minmax(0,0.8fr) minmax(0,1.1fr);
+column-gap:34px;
+margin-left:0;
+margin-right:0;
+}
+
+.main-footer .widgets-section .row > .footer-column{
+width:100%;
+max-width:none;
+padding-left:0;
+padding-right:0;
+}
+}
+
+@media only screen and (max-width:575px){
+.footer-ticket-btn{
+min-width:0;
+width:100%;
+}
+
+.floating-support-btn{
+width:50px;
+height:50px;
+left:15px;
+bottom:15px;
+font-size:20px;
+}
+}</style>
+<link href="css/footer-fix.css" rel="stylesheet">
 </head>
 
 <body>
@@ -295,14 +405,7 @@
 							<div class="text"><a href="tel:+27100065557"><i class="fa fa-solid fa-phone fa-fw"></i> (010) 006-5557</a></div>
 							<div class="text"><a href="mailto:support@itserv.co.za"><i class="fa fa-solid fa-envelope fa-fw"></i> support@itserv.co.za</a></div>
 							<div class="text"><a href="https://wa.me/27837754514" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp fa-fw"></i> +27 83 775 4514</a></div>
-							<div style="margin-top:24px;">
-								<a class="theme-btn btn-style-three btn-item footer-ticket-btn" href="mailto:support@itserv.co.za?subject=Support%20Ticket">
-									<div class="btn-wrap">
-										<span class="text-one"><i class="fa-solid fa-ticket fa-fw"></i> Log a ticket</span>
-										<span class="text-two"><i class="fa-solid fa-ticket fa-fw"></i> Log a ticket</span>
-									</div>
-								</a>
-							</div>
+							<button class="floating-support-btn" title="Start Support Session" onclick="window.open('https://assist.zoho.com/login/embed-remote-support.jsp', '_blank', 'width=600,height=700');"><i class="fa-solid fa-laptop-code"></i></button>
 						</div>
 					</div>
 
@@ -358,6 +461,7 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 
+<script src="js/footer-fix.js"></script>
 </body>
 </html>
 
