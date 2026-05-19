@@ -116,7 +116,7 @@ for filename in os.listdir(BASE):
     if 'rel="sitemap"' not in content and "rel='sitemap'" not in content:
         content = re.sub(
             r'(<meta\s+charset=[^>]+>)',
-            r'\1\n<link rel="sitemap" type="application/xml" href="/sitemap.xml">',
+            r'\1\n<link rel="sitemap" type="application/xml" href="https://www.itserv.co.za/sitemap.xml">',
             content, count=1, flags=re.IGNORECASE,
         )
 
@@ -133,3 +133,4 @@ for filename in os.listdir(BASE):
 print(f'Updated {len(changed)} files:')
 for f in sorted(changed):
     print(f'  {f}')
+
