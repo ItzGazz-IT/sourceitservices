@@ -1,4 +1,10 @@
-﻿/* Footer cleanup */
+﻿/* Scroll-to-top — move to left so it doesn't overlap the FAB contact button */
+.scroll-to-top {
+  right: auto !important;
+  left: 15px !important;
+}
+
+/* Footer cleanup */
 .main-footer .widgets-section .row {
   row-gap: 18px;
 }
@@ -40,51 +46,158 @@
   display: none !important;
 }
 
-/* ── Floating support button ─────────────────────────────── */
+/* ── Hide legacy floating widgets ───────────────────────── */
 .floating-support-btn {
-  position: fixed !important;
-  left: 28px !important;
-  top: 50% !important;
-  right: auto !important;
-  bottom: auto !important;
-  margin-left: 0 !important;
-  transform: translate3d(0, -50%, 0) !important;
-  width: 50px !important;
-  height: 50px !important;
-  background: linear-gradient(160deg, #0b5adb 0%, #1287ff 100%) !important;
-  border: 2px solid rgba(255, 255, 255, 0.92) !important;
-  border-radius: 50% !important;
-  box-shadow: 0 8px 18px rgba(11, 90, 219, 0.35) !important;
-  z-index: 2147483646 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 0 !important;
-  line-height: 1 !important;
-  font-size: 18px !important;
-  color: #fff !important;
-  cursor: pointer !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
-
-.floating-support-btn i {
-  width: 100% !important;
-  height: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 18px !important;
-  line-height: 1 !important;
-  transform: translateY(0) !important;
-}
-
-.floating-support-btn:hover {
-  transform: translate3d(0, -50%, 0) scale(1.05) !important;
-  box-shadow: 0 10px 22px rgba(11, 90, 219, 0.46) !important;
+  display: none !important;
 }
 
 .whatsapp-widget-fixed {
-  z-index: 2147483647 !important;
+  display: none !important;
+}
+
+/* Hide Zoho SalesIQ default float button */
+#zsiq_float {
+  display: none !important;
+}
+
+/* ── Contact FAB speed-dial ──────────────────────────────── */
+.contact-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fab-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.contact-fab.open .fab-options {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.fab-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.fab-label {
+  background: rgba(20, 20, 30, 0.78);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 4px 11px;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.fab-opt-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #fff;
+  text-decoration: none;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fab-opt-btn:hover,
+.fab-opt-btn:focus {
+  transform: scale(1.1);
+  color: #fff;
+  text-decoration: none;
+}
+
+.fab-whatsapp {
+  background: linear-gradient(160deg, #2eea7b 0%, #25d366 45%, #1faa57 100%);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.35);
+}
+
+.fab-chat {
+  background: linear-gradient(135deg, #0550A8, #042D80);
+  box-shadow: 0 5px 15px rgba(5, 80, 168, 0.35);
+}
+
+.fab-support {
+  background: linear-gradient(135deg, #6f42c1, #4a2c85);
+  box-shadow: 0 5px 15px rgba(111, 66, 193, 0.35);
+}
+
+.fab-main {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0550A8, #042D80);
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(4, 45, 128, 0.50);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.fab-main:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(4, 45, 128, 0.60);
+}
+
+.fab-icon-close {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}
+
+.contact-fab.open .fab-icon-main,
+.contact-fab.zoho-open .fab-icon-main {
+  display: none;
+}
+
+.contact-fab.open .fab-icon-close,
+.contact-fab.zoho-open .fab-icon-close {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}
+
+.contact-fab.open .fab-main,
+.contact-fab.zoho-open .fab-main {
+  background: linear-gradient(135deg, #dc3545, #b02330);
+  box-shadow: 0 8px 24px rgba(220, 53, 69, 0.45);
 }
 
 @media only screen and (max-width: 767px) {
@@ -93,14 +206,20 @@
     width: 100%;
   }
 
-  .floating-support-btn {
-    width: 44px !important;
-    height: 44px !important;
-    left: 16px !important;
-    font-size: 17px !important;
+  .contact-fab {
+    bottom: 16px;
+    right: 14px;
   }
 
-  .floating-support-btn i {
-    font-size: 16px !important;
+  .fab-main {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+
+  .fab-opt-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 19px;
   }
 }

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /not-found.html
+Disallow: /service-detail.html
+Disallow: /blog.html
+Disallow: /blog-detail.html
+Disallow: /project.html
+Disallow: /project-detail.html
+
+Sitemap: https://www.itserv.co.za/sitemap.xml
